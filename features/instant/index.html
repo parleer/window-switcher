@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instant open · Window Switcher</title>
+<meta name="description" content="Turn on instant open and the switcher appears the moment you press ⌥⇥, showing the windows it found last time, then updates a fraction of a second later.">
+<meta property="og:title" content="Instant open · Window Switcher">
+<meta property="og:description" content="Turn on instant open and the switcher appears the moment you press ⌥⇥, showing the windows it found last time, then updates a fraction of a second later.">
+<link rel="icon" href="../../images/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="../../">
+      <img src="../../images/icon.svg" alt="" width="28" height="28">
+      <span>Window Switcher</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="../../features/" aria-current="page">Features</a>
+      <a href="../../why-keys/">Why keys</a>
+      <a href="../../compare/">vs macOS</a>
+    </nav>
+    <a class="btn btn-sm" href="../../#get">Download</a>
+  </div>
+</header>
+
+<main id="main">
+
+
+<section class="fhero">
+  <div class="wrap">
+    <p class="crumbs"><a href="../">Features</a> / Instant open</p>
+    <span class="eyebrow">Instant open</span>
+    <h1>There the moment you press it.</h1>
+    <p class="lede">With instant open on, the switcher appears at once with the windows it found last time. The current list takes over a fraction of a second later, while you're still reading.</p>
+    <p class="speed-note">● Off by default. Nothing runs in the background to do it</p>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <div class="media-wrap"><figure class="media kind-video " style="aspect-ratio:16 / 9"><img src="../../images/media/instant-hero.jpg" alt="Side by side: the switcher opening normally and with instant open, slowed down" loading="lazy"><span class="draft-badge">AI draft · replace</span><span class="play" aria-hidden="true">▶</span></figure></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <span class="eyebrow">The standard way</span>
+        <h2>It looks before it shows you.</h2>
+        <p class="lede">Each time you open it, Window Switcher asks every app for its windows on every Space. With ten or so apps open, that takes about 250 to 400 milliseconds.</p>
+        <ul class="checks">
+          <li><strong>Apps are asked side by side.</strong> Not one after another.</li>
+          <li><strong>A busy app can't hold it up.</strong> If an app is slow to answer, the switcher stops waiting for it.</li>
+          <li><strong>What you see is current.</strong> The list is exactly what's open right now.</li>
+        </ul>
+      </div>
+      <div class="media-wrap"><figure class="media kind-icon " style="aspect-ratio:4 / 3"><img src="../../images/media/instant-timeline.jpg" alt="Diagram: standard open waits for the window list, instant open shows the last list first" loading="lazy"><span class="draft-badge">AI draft · replace</span></figure></div>
+    </div>
+
+    <div class="split flip">
+      <div>
+        <span class="eyebrow">With instant open</span>
+        <h2>Last time's list now. This time's list next.</h2>
+        <p class="lede">The switcher opens from the list it found last time, kept in memory. A fresh lookup runs at the same moment, and its result replaces the old list as soon as it's ready.</p>
+        <ul class="checks">
+          <li><strong>Your selection stays put.</strong> It follows the app and window you had selected, not a position in the list.</li>
+          <li><strong>New windows appear when the list updates.</strong> The layout may shift slightly when they do.</li>
+          <li><strong>Start typing right away.</strong> You can read and press keys while it catches up.</li>
+        </ul>
+      </div>
+      <div class="media-wrap"><figure class="media kind-video " style="aspect-ratio:16 / 10"><img src="../../images/media/instant-swap.jpg" alt="The switcher opens instantly, then a new window appears in the list as it updates" loading="lazy"><span class="draft-badge">AI draft · replace</span><span class="play" aria-hidden="true">▶</span></figure></div>
+    </div>
+
+    <div class="split">
+      <div>
+        <span class="eyebrow">Still quiet</span>
+        <h2>Fast without anything running.</h2>
+        <p class="lede">The saved list is only refreshed when you open the switcher. There's no timer and no background watching between uses. It just remembers what it saw last time.</p>
+      </div>
+      <div class="media-wrap"><figure class="media kind-screenshot " style="aspect-ratio:4 / 3"><img src="../../images/media/instant-settings.jpg" alt="Settings, General tab, with Show the switcher instantly using the last window list turned on" loading="lazy"><span class="draft-badge">AI draft · replace</span></figure></div>
+    </div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap narrow">
+    <div class="head">
+      <span class="eyebrow">Make it yours</span>
+      <h2>Settings that change it.</h2>
+      <p class="lede">In Settings → General.</p>
+    </div>
+    <div class="settings-list">
+      <div><div><b>Show the switcher instantly using the last window list</b><span>Open at once from the last list, then update when the current one arrives.</span></div><em>Off</em></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap narrow">
+    <div class="head">
+      <span class="eyebrow">Questions</span>
+      <h2>Good to know.</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Should I turn it on?</summary><p>Turn it on if you notice the short wait when the switcher opens. Leave it off if you'd rather the list never changes while it's on screen.</p></details>
+      <details><summary>Does it keep checking my windows in the background?</summary><p>No. The list is only looked up when you open the switcher. Between uses, nothing runs.</p></details>
+      <details><summary>What if I closed a window since last time?</summary><p>It may show for a moment, then drop out when the current list arrives. Your selection stays on the same app or window.</p></details>
+      <details><summary>Is the first open instant too?</summary><p>The very first open after Window Switcher starts has no saved list yet, so it opens the standard way. Every open after that is instant.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <nav class="pager" aria-label="More features">
+      <a href="../command-tab/"><small>← Previous</small>Replace ⌘⇥</a>
+      <a href="../quiet/"><small>Next →</small>Quiet in the menu bar</a>
+    </nav>
+  </div>
+</section>
+
+<section class="cta" id="get">
+  <div class="wrap narrow center">
+    <h2>Press ⌥⇥. Then the next key you want.</h2>
+    <p class="lede">Free for the Mac. No account, nothing running in the background, and every app has a key the moment it's installed.</p>
+    <a class="btn btn-lg" id="download" href="https://github.com/parleer/window-switcher/releases/latest" data-fallback="https://github.com/parleer/window-switcher/releases/latest">Download Window Switcher for Mac</a>
+    <p class="meta" id="meta">macOS 13 Ventura or later · Apple silicon and Intel</p>
+  </div>
+</section>
+
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="../../">
+        <img src="../../images/icon.svg" alt="" width="28" height="28">
+        <span>Window Switcher</span>
+      </a>
+      <p>Every app and window on your Mac, on every Space, one or two keys away. Free.</p>
+    </div>
+    <div class="foot-cols">
+      <div>
+        <h4>Open it</h4>
+        <a href="../../features/option-tab/">⌥⇥ that waits</a>
+        <a href="../../features/command-tab/">Replace ⌘⇥</a>
+        <a href="../../features/instant/">Instant open</a>
+        <a href="../../features/quiet/">Quiet in the menu bar</a>
+      </div>
+      <div>
+        <h4>See everything</h4>
+        <a href="../../features/every-space/">Every Space</a>
+        <a href="../../features/layout/">Columns that fit</a>
+        <a href="../../features/chrome-profiles/">Chrome by profile</a>
+      </div>
+      <div>
+        <h4>Press a key</h4>
+        <a href="../../features/automatic-keys/">Automatic keys</a>
+        <a href="../../features/your-keys/">Your own keys</a>
+        <a href="../../features/window-keys/">Two keys to any window</a>
+        <a href="../../features/window-shortcuts/">A window's own key</a>
+        <a href="../../features/arrows-mouse/">Arrows and mouse</a>
+        <a href="../../features/launch/">Launch or reopen</a>
+      </div>
+      <div>
+        <h4>Window Switcher</h4>
+        <a href="../../features/">All features</a>
+        <a href="../../why-keys/">Why keys</a>
+        <a href="../../compare/">vs the macOS switcher</a>
+        <a href="https://github.com/parleer/window-switcher/releases">Release notes</a>
+        <a href="../../#get">Download</a>
+      </div>
+    </div>
+  </div>
+  <div class="foot-fine">
+    <p>Made by <a href="https://flyinghippo.com">Flying Hippo</a>. Free for macOS 13 Ventura or later, on Apple silicon and Intel. Signed and notarized by Apple. Not affiliated with Apple or Google; macOS and Chrome are their trademarks.</p>
+  </div>
+</footer>
+
+
+<script src="../../download.js"></script>
+<script src="../../site.js"></script>
+</body>
+</html>

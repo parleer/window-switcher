@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Window Switcher · Every window, one key away</title>
+<meta name="description" content="A free Mac app switcher for the keyboard. Press ⌥⇥ and every app and window, on every Space, shows up with a key. Press it and you&#x27;re there.">
+<meta property="og:title" content="Window Switcher · Every window, one key away">
+<meta property="og:description" content="A free Mac app switcher for the keyboard. Press ⌥⇥ and every app and window, on every Space, shows up with a key. Press it and you&#x27;re there.">
+<link rel="icon" href="images/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="">
+      <img src="images/icon.svg" alt="" width="28" height="28">
+      <span>Window Switcher</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="features/">Features</a>
+      <a href="why-keys/">Why keys</a>
+      <a href="compare/">vs macOS</a>
+    </nav>
+    <a class="btn btn-sm" href="#get">Download</a>
+  </div>
+</header>
+
+<main id="main">
+
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">A window switcher for the Mac</span>
+    <h1>Every window, one key <em>away</em>.</h1>
+    <p class="lede">Press ⌥⇥ and every app and window on your Mac shows up, on every desktop, each with a key next to it. Press the key and you're there.</p>
+    <div class="btn-row">
+      <a class="btn" href="#get">Download free for Mac</a>
+      <a class="btn btn-ghost" href="features/">See what it does</a>
+    </div>
+    <ul class="trust">
+      <li>Free</li>
+      <li>No account</li>
+      <li>Nothing runs between uses</li>
+      <li>Every app has a key from the start</li>
+    </ul>
+    <div class="hero-demo">
+      <!-- Ordered as the app orders them: apps with keys set in Settings first (Code, Music,
+     Terminal), A to Z, then the rest A to Z. An app with one window shows no window letter. -->
+<div class="sw-desk" data-demo aria-label="Animated example: in Mail, pressing ⌥⇥ opens the switcher, then T and B switch to the server window in Terminal on another desktop" role="img">
+  <div class="sw-bar"><span data-bar-app>Mail</span><span>File</span><span>Edit</span><span>View</span><span data-bar-space>Desktop 1 · Tue 9:41</span></div>
+
+  <div class="sw-front" data-front="mail">
+    <div class="sw-tb"><i></i><i></i><i></i><b>Inbox — Re: launch checklist</b></div>
+    <pre>From: Priya
+Can you check the staging server before 10? The login page looked slow this morning.
+
+Thanks!</pre>
+  </div>
+  <div class="sw-front dark off" data-front="term">
+    <div class="sw-tb"><i></i><i></i><i></i><b>server — npm run dev</b></div>
+    <pre>&gt; app@2.4.0 dev
+&gt; next dev -p 3000
+
+<i>✓</i> Ready in 1.2s
+  GET /login 200 in 38ms
+  GET /api/session 200 in 12ms
+█</pre>
+  </div>
+
+  <div class="sw-panel off" data-panel>
+    <div class="sw-cols">
+      <div class="sw-col">
+        <div class="sw-group" data-app="code">
+          <div class="sw-app sel" data-sel="code"><i class="sw-icon i1">C</i><span>Code</span><span class="sw-keys"><b>C</b></span></div>
+          <div class="sw-win"><span>checkout.ts — web</span><span class="sw-keys"><b>C</b><b>A</b></span></div>
+          <div class="sw-win"><span>README.md — docs</span><span class="sw-keys"><b>C</b><b>B</b></span></div>
+          <div class="sw-win"><span>schema.sql — api</span><span class="sw-keys"><b>C</b><b>C</b></span></div>
+        </div>
+        <div class="sw-group" data-app="music">
+          <div class="sw-app"><i class="sw-icon i6">♪</i><span>Music</span><span class="sw-keys"><b>U</b></span></div>
+          <div class="sw-note">Not running. Choose it to open.</div>
+        </div>
+        <div class="sw-group" data-app="term">
+          <div class="sw-app"><i class="sw-icon i2">&gt;_</i><span>Terminal</span><span class="sw-keys"><b>T</b></span></div>
+          <div class="sw-win" data-sel="term-a"><span>api — zsh</span><span class="sw-keys"><b>T</b><b>A</b></span></div>
+          <div class="sw-win" data-sel="term-b"><span>server — npm run dev</span><i class="sw-space" title="On another desktop">⧉</i><span class="sw-keys"><b>T</b><b>B</b></span></div>
+          <div class="sw-win"><span>logs — tail -f</span><i class="sw-space" title="On another desktop">⧉</i><span class="sw-keys"><b>T</b><b>C</b></span></div>
+        </div>
+      </div>
+      <div class="sw-col">
+        <div class="sw-group" data-app="figma">
+          <div class="sw-app"><i class="sw-icon i6">F</i><span>Figma</span><span class="sw-keys"><b>F</b></span></div>
+          <div class="sw-win"><span>Checkout — v3</span><i class="sw-space" title="On another desktop">⧉</i><span class="sw-keys"><b>F</b><b>A</b></span></div>
+          <div class="sw-win"><span>Icons</span><i class="sw-space" title="On another desktop">⧉</i><span class="sw-keys"><b>F</b><b>B</b></span></div>
+        </div>
+        <div class="sw-group" data-app="chrome">
+          <div class="sw-app"><i class="sw-icon i3">G</i><span>Google Chrome</span><span class="sw-keys"><b>G</b></span></div>
+          <div class="sw-prof p1">Work</div>
+          <div class="sw-win p1"><span>Staging dashboard</span><span class="sw-keys"><b>G</b><b>A</b></span></div>
+          <div class="sw-win p1"><span>Pull request #412</span><span class="sw-keys"><b>G</b><b>B</b></span></div>
+          <div class="sw-prof p2">Personal</div>
+          <div class="sw-win p2"><span>Flights to Lisbon</span><span class="sw-keys"><b>G</b><b>C</b></span></div>
+        </div>
+      </div>
+      <div class="sw-col">
+        <div class="sw-group" data-app="mail">
+          <div class="sw-app"><i class="sw-icon i8">M</i><span>Mail</span><span class="sw-keys"><b>M</b></span></div>
+          <div class="sw-win"><span>Inbox — Re: launch checklist</span></div>
+        </div>
+        <div class="sw-group" data-app="notes">
+          <div class="sw-app"><i class="sw-icon i3">N</i><span>Notes</span><span class="sw-keys"><b>N</b></span></div>
+          <div class="sw-win"><span>Standup</span></div>
+        </div>
+        <div class="sw-group" data-app="slack">
+          <div class="sw-app"><i class="sw-icon i4">S</i><span>Slack</span><span class="sw-keys"><b>S</b></span></div>
+          <div class="sw-win"><span>#launch</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="sw-hint" data-hint>Press a shortcut · arrow keys or mouse to choose, ↩ to switch · esc close</div>
+  </div>
+
+  <div class="sw-press" aria-hidden="true"><kbd class="off" data-k>⌥⇥</kbd><kbd class="off" data-k2>B</kbd></div>
+  <p class="sw-caption" data-caption>You're reading mail. The server is on another desktop.</p>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap center">
+    <div class="head center">
+      <span class="eyebrow">Works with what you already use</span>
+      <h2>Every app on your Mac gets a key.</h2>
+      <p class="lede">There's nothing to set up per app. If it has a window, Window Switcher lists it and gives it a key.</p>
+    </div>
+    <div class="apps">
+      <span>Safari</span><span>Google Chrome</span><span>Arc</span><span>Firefox</span><span>Mail</span><span>Outlook</span><span>Slack</span><span>Messages</span><span>Zoom</span><span>Code</span><span>Xcode</span><span>Terminal</span><span>iTerm2</span><span>Figma</span><span>Sketch</span><span>Notes</span><span>Obsidian</span><span>Pages</span><span>Word</span><span>Excel</span><span>Preview</span><span>Finder</span><span>Music</span><span>Spotify</span>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">How it works</span>
+      <h2>Two keys from anywhere to anywhere.</h2>
+    </div>
+    <ol class="steps s4">
+      <li><h3>Press ⌥⇥ and let go</h3><p>The switcher opens over whatever you're doing and waits. No keys to hold down.</p></li>
+      <li><h3>See everything</h3><p>Every app and every window, on every desktop and full-screen Space, in columns.</p></li>
+      <li><h3>Press an app's key</h3><p>One window? You're there. Several? They light up with letters.</p></li>
+      <li><h3>Press a letter</h3><p>That window comes forward, on its own desktop if it has to. Esc goes back.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <span class="eyebrow">The keys don't move</span>
+        <h2>Same key, every time.</h2>
+        <p class="lede">⌘⇥ sorts apps by when you last used them, so where an app sits changes all day. Window Switcher gives each app a key and keeps it. After a day, your fingers know them.</p>
+        <ul class="checks">
+          <li><strong>No cycling.</strong> You don't tap ⇥ until the right icon lights up. You press the key you already know.</li>
+          <li><strong>No shuffling.</strong> Window letters follow the order windows were opened, so <kbd>T</kbd> <kbd>B</kbd> is the same terminal all afternoon.</li>
+          <li><strong>No searching.</strong> Nothing to type and nothing to read twice. The list stays still while you choose.</li>
+        </ul>
+      </div>
+      <div class="media-wrap"><figure class="media kind-video " style="aspect-ratio:16 / 10"><img src="images/media/home-same-key.jpg" alt="Side by side: cycling through ⌘⇥ to reach a window, and pressing T B in Window Switcher" loading="lazy"><span class="draft-badge">AI draft · replace</span><span class="play" aria-hidden="true">▶</span></figure></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">Ways to open it</span>
+      <h2>⌥⇥ by default. ⌘⇥ if you like.</h2>
+      <p class="lede">Pick the shortcut your hand reaches for. Whichever you choose, it opens the same switcher.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card feature-on">
+        <span class="tag">Built in · default</span>
+        <h3>⌥⇥</h3>
+        <p>macOS has no shortcut on Option-Tab, so it's free to claim and the built-in switcher stays exactly as it was.</p>
+        <dl><dt>Setup</dt><dd>None</dd><dt>Permission</dt><dd>None to open</dd><dt>Best for</dt><dd>Trying it out</dd></dl>
+      </div>
+      <a class="card link" href="features/command-tab/">
+        <span class="tag warm">Optional</span>
+        <h3>⌘⇥</h3>
+        <p>Turn it on and Command-Tab opens Window Switcher. The macOS switcher comes back whenever Window Switcher quits.</p>
+        <dl><dt>Setup</dt><dd>One switch in Settings</dd><dt>Default</dt><dd>Off</dd><dt>Best for</dt><dd>Muscle memory</dd></dl>
+        <span class="more">Replace ⌘⇥ →</span>
+      </a>
+      <a class="card link" href="features/option-tab/">
+        <span class="tag warm">Optional</span>
+        <h3>Your own shortcut</h3>
+        <p>Record any shortcut you like instead, such as ⌃⇥ or a spare key on your keyboard. Add ⇧ to start from the end.</p>
+        <dl><dt>Setup</dt><dd>Settings → General</dd><dt>Default</dt><dd>⌥⇥</dd><dt>Best for</dt><dd>Custom keyboards</dd></dl>
+        <span class="more">How opening works →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap narrow">
+    <div class="head center">
+      <span class="eyebrow">Getting there</span>
+      <h2>Stop cycling. Start pressing.</h2>
+      <p class="lede">The same trips, with the built-in switcher and with Window Switcher.</p>
+    </div>
+    <div class="ba">
+      <div class="ba-row">
+        <p class="label">The second of three terminal windows</p>
+        <div class="said">⌘⇥ ⇥ ⇥ ⇥, let go, then ⌘` until it's the right one</div>
+        <span class="arrow" aria-hidden="true">→</span>
+        <div class="got"><kbd>⌥⇥</kbd> <kbd>T</kbd> <kbd>B</kbd></div>
+      </div>
+      <div class="ba-row">
+        <p class="label">A design file on another desktop</p>
+        <div class="said">Swipe across desktops, or open Mission Control and look for it</div>
+        <span class="arrow" aria-hidden="true">→</span>
+        <div class="got"><kbd>⌥⇥</kbd> <kbd>F</kbd> <kbd>A</kbd>, and you're on that desktop</div>
+      </div>
+      <div class="ba-row">
+        <p class="label">Your work Gmail, not your personal one</p>
+        <div class="said">⌘⇥ to Chrome, then ⌘` through every Chrome window</div>
+        <span class="arrow" aria-hidden="true">→</span>
+        <div class="got"><kbd>⌥⇥</kbd> <kbd>G</kbd> <kbd>A</kbd>, listed under your Work profile</div>
+      </div>
+      <div class="ba-row">
+        <p class="label">An app that isn't open yet</p>
+        <div class="said">⌘Space, type its name, ↩</div>
+        <span class="arrow" aria-hidden="true">→</span>
+        <div class="got"><kbd>⌥⇥</kbd> <kbd>U</kbd>, and it launches</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="split flip">
+      <div>
+        <span class="eyebrow">Your keys or ours</span>
+        <h2>Set the keys you care about. Leave the rest.</h2>
+        <p class="lede">You don't have to set anything up. Choose keys only where you have an opinion.</p>
+        <ul class="checks">
+          <li><strong>Automatic keys.</strong> Every app gets the first free letter of its name, and keeps it. Costs nothing, but Calendar might end up on <kbd>A</kbd> if <kbd>C</kbd> is taken.</li>
+          <li><strong>Your keys.</strong> Put the apps you use most on the keys you want. A minute in Settings, and automatic keys move out of their way.</li>
+          <li><strong>A window's own key.</strong> One press to the window you always want, matched by its title. Worth it for the two or three windows you live in.</li>
+        </ul>
+      </div>
+      <div class="media-wrap"><figure class="media kind-screenshot " style="aspect-ratio:4 / 3"><img src="images/media/home-settings-shortcuts.jpg" alt="Window Switcher&#x27;s Shortcuts settings with apps and windows given keys" loading="lazy"><span class="draft-badge">AI draft · replace</span></figure></div>
+    </div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">What ⌘⇥ can't do</span>
+      <h2>The parts you'll miss when you go back.</h2>
+    </div>
+    <div class="grid g2">
+      <a class="card link" href="features/window-keys/">
+        <span class="tag">Windows</span>
+        <h3>Two keys to any window.</h3>
+        <p>⌘⇥ picks an app. Window Switcher picks the window: the app's key, then the window's letter. The letters don't reshuffle as you work.</p>
+        <span class="more">How it works →</span>
+      </a>
+      <a class="card link" href="features/every-space/">
+        <span class="tag">Spaces</span>
+        <h3>Every desktop in one list.</h3>
+        <p>Windows on other desktops and in full-screen apps are listed next to the ones in front of you. Choose one and you go to its desktop.</p>
+        <span class="more">How it works →</span>
+      </a>
+      <a class="card link" href="features/chrome-profiles/">
+        <span class="tag">Chrome</span>
+        <h3>Chrome, sorted by profile.</h3>
+        <p>Work, personal and client windows each sit under their profile's name, in the colour you gave it in Chrome.</p>
+        <span class="more">How it works →</span>
+      </a>
+      <a class="card link" href="features/launch/">
+        <span class="tag">Launch</span>
+        <h3>Keys for apps that aren't open.</h3>
+        <p>An app with a key is listed even when it isn't running. Press its key and it launches. If it's running with no windows, you get a new one.</p>
+        <span class="more">How it works →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">For your day</span>
+      <h2>Made for people with a lot of windows.</h2>
+    </div>
+    <div class="people">
+      <div class="person">
+        <div class="media-wrap"><figure class="media kind-photo " style="aspect-ratio:3 / 2"><img src="images/media/persona-developer.jpg" alt="A developer at a desk with two monitors, hand on the keyboard" loading="lazy"><span class="draft-badge">AI draft · replace</span></figure></div>
+        <div class="txt"><h3>Developers</h3><p>Three editors, four terminals and a browser across two desktops. <kbd>T</kbd> <kbd>B</kbd> is the server, <kbd>C</kbd> <kbd>A</kbd> is the frontend, all day.</p></div>
+      </div>
+      <div class="person">
+        <div class="media-wrap"><figure class="media kind-photo " style="aspect-ratio:3 / 2"><img src="images/media/persona-consultant.jpg" alt="A consultant working on a laptop at a café table" loading="lazy"><span class="draft-badge">AI draft · replace</span></figure></div>
+        <div class="txt"><h3>Consultants and agencies</h3><p>A Chrome profile per client. Each client's windows sit under their name and colour, so you never reply from the wrong account.</p></div>
+      </div>
+      <div class="person">
+        <div class="media-wrap"><figure class="media kind-photo " style="aspect-ratio:3 / 2"><img src="images/media/persona-designer.jpg" alt="A designer at a large display with a tablet beside the keyboard" loading="lazy"><span class="draft-badge">AI draft · replace</span></figure></div>
+        <div class="txt"><h3>Designers</h3><p>A dozen Figma files and Preview windows that look alike as thumbnails. As a list of names, the right one is obvious.</p></div>
+      </div>
+      <div class="person">
+        <div class="media-wrap"><figure class="media kind-photo " style="aspect-ratio:3 / 2"><img src="images/media/persona-writer.jpg" alt="A writer at a kitchen table with a laptop and printed pages" loading="lazy"><span class="draft-badge">AI draft · replace</span></figure></div>
+        <div class="txt"><h3>Writers and researchers</h3><p>The draft, the notes and six source PDFs open at once. Jump between them without reaching for the mouse or losing your sentence.</p></div>
+      </div>
+      <div class="person">
+        <div class="media-wrap"><figure class="media kind-photo " style="aspect-ratio:3 / 2"><img src="images/media/persona-spaces.jpg" alt="A person using a laptop with an ultrawide monitor, several apps full screen" loading="lazy"><span class="draft-badge">AI draft · replace</span></figure></div>
+        <div class="txt"><h3>Full-screen and Spaces people</h3><p>An app per desktop and a few in full screen. Reach any window directly, without swiping through desktops to find it.</p></div>
+      </div>
+      <div class="person">
+        <div class="media-wrap"><figure class="media kind-photo " style="aspect-ratio:3 / 2"><img src="images/media/persona-switcher.jpg" alt="Someone setting up a new Mac at a desk" loading="lazy"><span class="draft-badge">AI draft · replace</span></figure></div>
+        <div class="txt"><h3>New to the Mac</h3><p>Coming from Windows, your thumb already reaches for Alt-Tab. ⌥⇥ is right there, and it shows windows, not just apps.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">Real people</span>
+      <h2>What people say after a week.</h2>
+    </div>
+    <p class="draft-only">Placeholders. These show the kind of quote we want; replace them with real ones, used with permission, before launch.</p>
+    <div class="quotes placeholder">
+      <blockquote><p>"I stopped using Mission Control. I didn't decide to, I just noticed I hadn't opened it in days."</p><cite>Placeholder · a developer</cite></blockquote>
+      <blockquote><p>"Four Chrome profiles, four colours. I haven't sent an email from the wrong account since."</p><cite>Placeholder · a consultant</cite></blockquote>
+      <blockquote><p>"The letters staying put is the whole thing. My hands know where everything is."</p><cite>Placeholder · a designer</cite></blockquote>
+      <blockquote><p>"I turned on the ⌘⇥ option on day two and never looked back."</p><cite>Placeholder · a product manager</cite></blockquote>
+      <blockquote><p>"Finally a switcher that shows me windows on my other desktops."</p><cite>Placeholder · a video editor</cite></blockquote>
+      <blockquote><p>"It doesn't do anything until I press the key. That's what I wanted."</p><cite>Placeholder · a sysadmin</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">How it compares</span>
+      <h2>What you get on top of the built-in switcher.</h2>
+    </div>
+    <div class="table-scroll">
+      <table class="cmp">
+        <thead><tr><th></th><th class="us">Window Switcher</th><th>macOS ⌘⇥ and Mission Control</th></tr></thead>
+        <tbody>
+          <tr><th>Pick a window, not just an app</th><td class="us"><span class="yes">Yes</span><small>App's key, then the window's letter</small></td><td><span class="part">Partly</span><small>⌘` cycles the front app's windows; ⌃↓ shows them</small></td></tr>
+          <tr><th>Windows on other desktops</th><td class="us"><span class="yes">Yes</span><small>Listed with the rest, one choice away</small></td><td><span class="part">Partly</span><small>Mission Control shows other desktops as thumbnails</small></td></tr>
+          <tr><th>The same key every time</th><td class="us"><span class="yes">Yes</span><small>Keys stay with their app</small></td><td><span class="no">No</span><small>Ordered by most recently used</small></td></tr>
+          <tr><th>Stays open after you let go</th><td class="us"><span class="yes">Yes</span><small>Waits until you choose or press Esc</small></td><td><span class="no">No</span><small>Closes when you release ⌘</small></td></tr>
+          <tr><th>Opens apps that aren't running</th><td class="us"><span class="yes">Yes</span><small>For apps you've given a key</small></td><td><span class="no">No</span><small>Open apps only</small></td></tr>
+          <tr><th>Chrome windows by profile</th><td class="us"><span class="yes">Yes</span><small>In each profile's colour</small></td><td><span class="no">No</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="draft-only">Sources: Apple's "Mac keyboard shortcuts" and Mission Control guides, checked 25 Nov 2026. "Closes when you release ⌘" and "Open apps only" are our reading of how ⌘⇥ behaves; Apple's pages describe it as switching among "your open apps".</p>
+    <div class="btn-row center-row">
+      <a class="btn btn-ghost" href="compare/">The full comparison</a>
+    </div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <div class="head center">
+      <span class="eyebrow">A note from us</span>
+    </div>
+    <p class="draft-only letter-note">Draft. Rewrite this in your own words before launch.</p>
+    <div class="letter">
+      <p>I keep a lot of windows open. Three projects, a terminal for each, a Chrome profile for every client, and something in full screen on another desktop. ⌘⇥ gets me to the right app. Then I start hunting.</p>
+      <p>So we built the switcher I wanted: one press to see everything, and a key for every window that doesn't move. After a few days you stop reading the list. Your hands just go.</p>
+      <p>It doesn't watch your keyboard, it doesn't run between uses, and it doesn't send anything anywhere. It's a small app that does one thing, and it's free.</p>
+      <p>If something about it bugs you, tell us. We use it all day too.</p>
+      <p class="sig">Ryan Parlee, Flying Hippo</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="get">
+  <div class="wrap narrow center">
+    <h2>Press ⌥⇥. Then the next key you want.</h2>
+    <p class="lede">Free for the Mac. No account, nothing running in the background, and every app has a key the moment it's installed.</p>
+    <a class="btn btn-lg" id="download" href="https://github.com/parleer/window-switcher/releases/latest" data-fallback="https://github.com/parleer/window-switcher/releases/latest">Download Window Switcher for Mac</a>
+    <p class="meta" id="meta">macOS 13 Ventura or later · Apple silicon and Intel</p>
+  </div>
+</section>
+
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="">
+        <img src="images/icon.svg" alt="" width="28" height="28">
+        <span>Window Switcher</span>
+      </a>
+      <p>Every app and window on your Mac, on every Space, one or two keys away. Free.</p>
+    </div>
+    <div class="foot-cols">
+      <div>
+        <h4>Open it</h4>
+        <a href="features/option-tab/">⌥⇥ that waits</a>
+        <a href="features/command-tab/">Replace ⌘⇥</a>
+        <a href="features/instant/">Instant open</a>
+        <a href="features/quiet/">Quiet in the menu bar</a>
+      </div>
+      <div>
+        <h4>See everything</h4>
+        <a href="features/every-space/">Every Space</a>
+        <a href="features/layout/">Columns that fit</a>
+        <a href="features/chrome-profiles/">Chrome by profile</a>
+      </div>
+      <div>
+        <h4>Press a key</h4>
+        <a href="features/automatic-keys/">Automatic keys</a>
+        <a href="features/your-keys/">Your own keys</a>
+        <a href="features/window-keys/">Two keys to any window</a>
+        <a href="features/window-shortcuts/">A window's own key</a>
+        <a href="features/arrows-mouse/">Arrows and mouse</a>
+        <a href="features/launch/">Launch or reopen</a>
+      </div>
+      <div>
+        <h4>Window Switcher</h4>
+        <a href="features/">All features</a>
+        <a href="why-keys/">Why keys</a>
+        <a href="compare/">vs the macOS switcher</a>
+        <a href="https://github.com/parleer/window-switcher/releases">Release notes</a>
+        <a href="#get">Download</a>
+      </div>
+    </div>
+  </div>
+  <div class="foot-fine">
+    <p>Made by <a href="https://flyinghippo.com">Flying Hippo</a>. Free for macOS 13 Ventura or later, on Apple silicon and Intel. Signed and notarized by Apple. Not affiliated with Apple or Google; macOS and Chrome are their trademarks.</p>
+  </div>
+</footer>
+
+
+<script src="download.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

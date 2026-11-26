@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A window's own key · Window Switcher</title>
+<meta name="description" content="Give the window you always come back to a key of its own. Press ⌥⇥ and that one key, and you&#x27;re in it, on whichever desktop it&#x27;s on.">
+<meta property="og:title" content="A window's own key · Window Switcher">
+<meta property="og:description" content="Give the window you always come back to a key of its own. Press ⌥⇥ and that one key, and you&#x27;re in it, on whichever desktop it&#x27;s on.">
+<link rel="icon" href="../../images/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body class="">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="../../">
+      <img src="../../images/icon.svg" alt="" width="28" height="28">
+      <span>Window Switcher</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="../../features/" aria-current="page">Features</a>
+      <a href="../../why-keys/">Why keys</a>
+      <a href="../../compare/">vs macOS</a>
+    </nav>
+    <a class="btn btn-sm" href="../../#get">Download</a>
+  </div>
+</header>
+
+<main id="main">
+
+
+<section class="fhero">
+  <div class="wrap">
+    <p class="crumbs"><a href="../">Features</a> / A window's own key</p>
+    <span class="eyebrow">A window's own key</span>
+    <h1>One press to the window you always want.</h1>
+    <p class="lede">Some windows you visit fifty times a day: the dev server, the team chat, the draft you're writing. Give one a key of its own. Press ⌥⇥, then <kbd>D</kbd>, and you're in it.</p>
+    <p class="speed-note">● Found by its title, so it works every time the window opens</p>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <div class="sw-desk short">
+      <div class="sw-panel">
+        <div class="sw-cols">
+          <div class="sw-col">
+            <div class="sw-group">
+              <div class="sw-app"><i class="sw-icon i1">C</i><span>Code</span><span class="sw-keys"><b>C</b></span></div>
+              <div class="sw-win"><span>checkout.ts — web</span><span class="sw-keys"><b>C</b><b>A</b></span></div>
+              <div class="sw-win"><span>README.md — docs</span><span class="sw-keys"><b>C</b><b>B</b></span></div>
+            </div>
+            <div class="sw-group">
+              <div class="sw-app"><i class="sw-icon i3">G</i><span>Google Chrome</span><span class="sw-keys"><b>G</b></span></div>
+              <div class="sw-win"><span>Staging dashboard</span><span class="sw-keys"><b>1</b></span></div>
+              <div class="sw-win"><span>Pull request #412</span><span class="sw-keys"><b>G</b><b>B</b></span></div>
+            </div>
+          </div>
+          <div class="sw-col">
+            <div class="sw-group">
+              <div class="sw-app"><i class="sw-icon i4">S</i><span>Slack</span><span class="sw-keys"><b>S</b></span></div>
+              <div class="sw-win"><span>#launch</span></div>
+            </div>
+            <div class="sw-group">
+              <div class="sw-app"><i class="sw-icon i2">&gt;_</i><span>Terminal</span><span class="sw-keys"><b>T</b></span></div>
+              <div class="sw-win"><span>api — zsh</span><span class="sw-keys"><b>T</b><b>A</b></span></div>
+              <div class="sw-win sel"><span>server — npm run dev</span><i class="sw-space" title="On another desktop">⧉</i><span class="sw-keys"><b>D</b></span></div>
+              <div class="sw-win"><span>logs — tail -f</span><i class="sw-space" title="On another desktop">⧉</i><span class="sw-keys"><b>T</b><b>C</b></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="sw-hint">Press a shortcut · arrow keys or mouse to choose, ↩ to switch · esc close</div>
+      </div>
+    </div>
+    <p class="meta center">The server window has its own key, <kbd>D</kbd>, and the staging dashboard has <kbd>1</kbd>. Every other window works the way it always does.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <span class="eyebrow">How to set one</span>
+        <h2>Pick the window from a list.</h2>
+        <p class="lede">In Settings → Shortcuts, click Add Window…. You'll see every window that's open right now, grouped by app. Click the one you want.</p>
+        <ul class="checks">
+          <li><strong>It gets a key straight away.</strong> The first free letter of its title. Click the key to change it.</li>
+          <li><strong>Its app comes along.</strong> If the app doesn't have a key of yours yet, it's added too.</li>
+          <li><strong>It lives under its app.</strong> The window shows up in the list, just below the app it belongs to.</li>
+        </ul>
+      </div>
+      <div class="media-wrap"><figure class="media kind-screenshot " style="aspect-ratio:4 / 3"><img src="../../images/media/window-shortcuts-choose.jpg" alt="The Choose a window list in Settings, with open windows grouped under Code, Google Chrome and Terminal" loading="lazy"><span class="draft-badge">AI draft · replace</span></figure></div>
+    </div>
+
+    <div class="split flip">
+      <div>
+        <span class="eyebrow">Found by its title</span>
+        <h2>Keep a word or two. It finds the window again.</h2>
+        <p class="lede">A window shortcut matches any window whose title contains your text, ignoring case. Trim the title down to the part that doesn't change, like "server", and the key finds that window every time it opens.</p>
+        <ul class="checks">
+          <li><strong>Survives restarts.</strong> Quit Terminal, open the server again tomorrow, and <kbd>D</kbd> still goes there.</li>
+          <li><strong>Any desktop.</strong> If the window is on another desktop or in full screen, macOS takes you there.</li>
+          <li><strong>One window per key.</strong> If several titles match, the first one listed gets the key.</li>
+        </ul>
+      </div>
+      <div class="media-wrap"><figure class="media kind-screenshot " style="aspect-ratio:4 / 3"><img src="../../images/media/window-shortcuts-title.jpg" alt="A window shortcut in Settings matching titles that contain server, with the key D" loading="lazy"><span class="draft-badge">AI draft · replace</span></figure></div>
+    </div>
+
+    <div class="split">
+      <div>
+        <span class="eyebrow">In the switcher</span>
+        <h2>One key, straight there.</h2>
+        <p class="lede">A window with its own key shows just that key in its row. No app key first, no waiting for a letter. Press it and the switcher closes on that window.</p>
+        <p>The window's app keeps its own key, and the app's other windows keep their letters. If an app key and a window key ever clash, the app key wins and Settings shows a warning on both.</p>
+      </div>
+      <div class="media-wrap"><figure class="media kind-video " style="aspect-ratio:16 / 10"><img src="../../images/media/window-shortcuts-press.jpg" alt="Pressing Option-Tab then D jumps from Mail to the server Terminal window on another desktop" loading="lazy"><span class="draft-badge">AI draft · replace</span><span class="play" aria-hidden="true">▶</span></figure></div>
+    </div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap narrow">
+    <div class="head">
+      <span class="eyebrow">Make it yours</span>
+      <h2>Settings that change it.</h2>
+      <p class="lede">In Settings → Shortcuts.</p>
+    </div>
+    <div class="settings-list">
+      <div><div><b>Add Window…</b><span>Give an open window a key of its own. Needs Accessibility, like the window list.</span></div><em>None</em></div>
+      <div><div><b>Window title contains</b><span>The text a window's title must include to get the key. Case doesn't matter.</span></div><em>Full title</em></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap narrow">
+    <div class="head">
+      <span class="eyebrow">Questions</span>
+      <h2>Good to know.</h2>
+    </div>
+    <div class="faq">
+      <details><summary>What if the window isn't open?</summary><p>The key waits. As soon as a window with that text in its title opens, it has the key again.</p></details>
+      <details><summary>Can a window's key be the same as an app's?</summary><p>Settings lets you, and shows an orange warning on both. In the switcher the app key wins, so pick another key for the window.</p></details>
+      <details><summary>How many windows can have their own key?</summary><p>As many as you have free keys. Each one takes a key that no app will get automatically.</p></details>
+      <details><summary>Does the window still have its two-key address?</summary><p>Yes. Its app's key and letter still work. The row just shows the shorter one.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <nav class="pager" aria-label="More features">
+      <a href="../window-keys/"><small>← Previous</small>Two keys to any window</a>
+      <a href="../arrows-mouse/"><small>Next →</small>Arrows and mouse</a>
+    </nav>
+  </div>
+</section>
+
+<section class="cta" id="get">
+  <div class="wrap narrow center">
+    <h2>Press ⌥⇥. Then the next key you want.</h2>
+    <p class="lede">Free for the Mac. No account, nothing running in the background, and every app has a key the moment it's installed.</p>
+    <a class="btn btn-lg" id="download" href="https://github.com/parleer/window-switcher/releases/latest" data-fallback="https://github.com/parleer/window-switcher/releases/latest">Download Window Switcher for Mac</a>
+    <p class="meta" id="meta">macOS 13 Ventura or later · Apple silicon and Intel</p>
+  </div>
+</section>
+
+
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="../../">
+        <img src="../../images/icon.svg" alt="" width="28" height="28">
+        <span>Window Switcher</span>
+      </a>
+      <p>Every app and window on your Mac, on every Space, one or two keys away. Free.</p>
+    </div>
+    <div class="foot-cols">
+      <div>
+        <h4>Open it</h4>
+        <a href="../../features/option-tab/">⌥⇥ that waits</a>
+        <a href="../../features/command-tab/">Replace ⌘⇥</a>
+        <a href="../../features/instant/">Instant open</a>
+        <a href="../../features/quiet/">Quiet in the menu bar</a>
+      </div>
+      <div>
+        <h4>See everything</h4>
+        <a href="../../features/every-space/">Every Space</a>
+        <a href="../../features/layout/">Columns that fit</a>
+        <a href="../../features/chrome-profiles/">Chrome by profile</a>
+      </div>
+      <div>
+        <h4>Press a key</h4>
+        <a href="../../features/automatic-keys/">Automatic keys</a>
+        <a href="../../features/your-keys/">Your own keys</a>
+        <a href="../../features/window-keys/">Two keys to any window</a>
+        <a href="../../features/window-shortcuts/">A window's own key</a>
+        <a href="../../features/arrows-mouse/">Arrows and mouse</a>
+        <a href="../../features/launch/">Launch or reopen</a>
+      </div>
+      <div>
+        <h4>Window Switcher</h4>
+        <a href="../../features/">All features</a>
+        <a href="../../why-keys/">Why keys</a>
+        <a href="../../compare/">vs the macOS switcher</a>
+        <a href="https://github.com/parleer/window-switcher/releases">Release notes</a>
+        <a href="../../#get">Download</a>
+      </div>
+    </div>
+  </div>
+  <div class="foot-fine">
+    <p>Made by <a href="https://flyinghippo.com">Flying Hippo</a>. Free for macOS 13 Ventura or later, on Apple silicon and Intel. Signed and notarized by Apple. Not affiliated with Apple or Google; macOS and Chrome are their trademarks.</p>
+  </div>
+</footer>
+
+
+<script src="../../download.js"></script>
+<script src="../../site.js"></script>
+</body>
+</html>
